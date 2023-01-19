@@ -1,0 +1,90 @@
+{
+    "Employedetails": [{
+        
+        "Employeid":"10",
+        "Name": "Teja",
+        "Date of Birth":"01-04-2001",
+        "Age":"26",
+        "Gender":"Male",
+        "Role": " Fiori role",
+        "Date of Joining":"07-08-2022",
+        "Position":"intern",
+        "CTC": "12000",
+        "Number": "9550840453",
+        "Alternative Mobile Number":"6281245810",
+        "Email ID":"tejabhutesh@gmail.com",
+        "Address":"NKP,MADAKASIRA,INDIA"
+
+        
+    },
+    {
+        
+        "Employeid":"456",
+        "Name": "Ramya",
+        "Date of Birth":"01-04-2001",
+        "Age":"25",
+        "Gender":"Female",
+        "Role": " Fiori role",
+        "Date of Joining":"07-08-2022",
+        "Position":"intern",
+        "CTC": "18000",
+        "Number": "9550840453",
+        "Alternative Mobile Number":"6281245810",
+        "Email ID":"tejabhutesh@gmail.com",
+        "Address":"NKP,MADAKASIRA,INDIA"
+
+
+    },
+    {
+        
+        "Employeid":"345",
+        "Name": "Sri",
+        "Date of Birth":"01-04-2001",
+        "Age":"24",
+        "Gender":"other",
+        "Role": " Fiori role",
+        "Date of Joining":"07-08-2022",
+        "Position":"intern",
+        "CTC": "10000",
+        "Number": "9550840453",
+        "Alternative Mobile Number":"6281245810",
+        "Email ID":"tejabhutesh@gmail.com",
+        "Address":"NKP,MADAKASIRA,INDIA"
+
+
+    },
+    {
+        
+        "Employeid":"999",
+        "Name": "Swathi",
+        "Date of Birth":"01-04-2001",
+        "Age":"23",
+        "Gender":"Female",
+        "Role": " Fiori role",
+        "Date of Joining":"07-08-2022",
+        "Position":"intern",
+        "CTC": "17000",
+        "Number": "9550840453",
+        "Alternative Mobile Number":"6281245810",
+        "Email ID":"tejabhutesh@gmail.com",
+        "Address":"NKP,MADAKASIRA,INDIA"
+
+
+    },
+    {
+        
+        "Employeid":"555",
+        "Name": "Bhuthesh",
+        "Date of Birth":"01-04-2001",
+        "Age":"22",
+        "Gender":"Male",
+        "Role": " Fiori role",
+        "Date of Joining":"07-08-2022",
+        "Position":"intern",
+        "CTC": "13000",
+        "Number": "9550840453",
+        "Alternative Mobile Number":"6281245810",
+        "Email ID":"tejabhutesh@gmail.com",
+        "Address":"NKP,MADAKASIRA,INDIA"
+    }]
+}

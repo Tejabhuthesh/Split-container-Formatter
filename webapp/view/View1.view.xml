@@ -1,0 +1,181 @@
+<mvc:View  controllerName="demoroutingid.demorouting.controller.View1" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m" xmlns:tnt="sap.tnt"
+	xmlns:custom="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+    <SplitContainer id="SplitContDemo"  >
+      
+        <detailPages>
+            <Page id="page" title="Deatail Page">
+                <content>
+                    <ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+                        <Table width="100rem" id="idProductsTable" inset="true" headerText="EMPLOYE DETAILS" visible="true" items="{
+			path: 'Data1>/Employedetails',
+			sorter: {
+				path: 'Name'
+			}
+		}">
+                            <columns>
+                                <Column width="auto">
+                                    <Link text="Employe id" id="67" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Employe Name" />
+                                </Column>
+
+                                <Column>
+                                    <Text text=" Date of Birth" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Age" />
+                                </Column>
+                              
+                              <Column>
+                                    <Text text="Gender" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Role" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Date of Joining" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Position" />
+                                </Column>
+
+                                <Column>
+                                    <Text text=" CTC" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Number" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Alternative Mobile Number" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Email ID" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="Address" />
+                                </Column>
+
+                                <Column>
+                                    <Text text="HI" />
+                                </Column>
+                            </columns>
+                            <items>
+                                <ColumnListItem type="Active" id="colss"  highlight="{= ${Data1>Age} > 23 ? 'Success' :'Error' }">
+                             
+                                <!-- highlight ="{=${Data1>Gender} === 'Male' ? 'Success' :'Error'}" -->
+                                    <cells>
+                                        <Button text="{Data1>Employeid}" press="onRowClick" type="Emphasized" id="button" />
+                                        <Text text="{Data1>Name}" class="" />
+                                        <Text text="{Data1>Date of Birth}" />
+                                        <!-- <Text text= 
+                                          "{
+                                          parts:[
+                                          {path: 'Data1>Age'}
+                                          ], 
+                                          formatter: '.formatter.colorState'  }" /> -->
+
+                                         <tnt:InfoLabel
+                                            text="{Data1>Age}"
+                                            displayOnly="false"
+                                            colorScheme="{
+                                          parts:[
+                                          {path: 'Data1>Age'}
+                                          ],
+                                          formatter: '.colorState'  
+                                          }"
+                                        /> 
+                                    
+                                         <ObjectNumber number="{Data1>Gender}" state="{
+						         	             parts: [
+							      	             {path: 'Data1>Gender'}
+							                            ],
+							                    formatter: '.formatter.colors1State'
+                                             }" />
+
+                                        <Text text="{Data1>Role}" />
+                                        <Text text="{Data1>Date of Joining}" />
+                                        <Text text="{Data1>Position}" />
+                                        <ObjectNumber number="{Data1>CTC}" state="{
+						         	             parts: [
+							      	             {path: 'Data1>CTC'}
+							                            ],
+							                    formatter: '.formatter.colorsState'
+                                             }" />
+                                        <!-- <Input value="{Data1>CTC}" editable="false" id="empID" /> -->
+                                        <Text text="{Data1>Number}" />
+                                        <Text text="{Data1>Alternative Mobile Number}" />
+
+                                        <Text text="{Data1>Email ID}" />
+                                        <Text text="{Data1>Address}" />
+
+                                        <HBox>
+                                            <Button icon="sap-icon://edit" text="Edit" press="onEdit" />
+                                        </HBox>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </ScrollContainer>
+                </content>
+            </Page>
+            	<Page
+				id="detailDetail"
+				title="Detail Detail"
+				backgroundDesign= "Solid"
+				showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+                </Page>
+                <Page
+				id="detail2"
+				title="Detail 3 Page"
+				backgroundDesign= "Solid"
+				showNavButton="true"
+				navButtonPress=".onPressDetailBack">
+				<Label text="This is Detail Page 3" />
+				<Input width="20rem"/>
+				
+			</Page>
+        </detailPages>
+        <masterPages>
+            <Page id="id5" title="Master Page1">
+                <content>
+                    <ScrollContainer height="100%" width="100%" vertical="true" focusable="true">
+                        <List width="20rem" id="idProductsTable1" headerText="EMPLOYE DETAILS" 
+                        items="{
+			                       path: 'Data1>/Employedetails',
+			                        sorter: {
+			                     	path: 'Name'
+			                                 }
+	                          	}">
+
+                            <items>
+                                <ObjectListItem title="{Data1>Employeid}"
+                                 number="{Data1>CTC}" 
+                                numberState="{= ${Data1>CTC} > 13000 ?'Warning' : 'Success' }"
+                                 intro="{Data1>Name}" id="fff" 
+                                 press="onListPress" type="Navigation" />
+                            </items>
+                        </List>
+                    </ScrollContainer>
+                </content>
+            </Page>
+            <Page id="master2" title="Master 2"  showNavButton="true" navButtonPress="onPressMasterBack" >
+            	<List itemPress=".onListItemPress">
+					<StandardListItem title="To Detail 1" type="Active" custom:to="page" />
+					<StandardListItem title="To Detail 2" type="Active" custom:to="detailDetail" />
+					<StandardListItem title="To Detail 3" type="Active" custom:to="detail2" />
+				</List>
+                </Page>
+        </masterPages>
+    </SplitContainer>
+</mvc:View>
